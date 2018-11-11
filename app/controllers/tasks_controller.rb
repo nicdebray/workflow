@@ -13,7 +13,7 @@ class TasksController < ApplicationController
   end
 
   def create
-    @task = Task.new(params[:task])
+    @task = Task.new(task_params)
     if @task.save
       redirect_to task_path(@task)
     else
@@ -25,7 +25,7 @@ class TasksController < ApplicationController
   end
 
   def update
-    if @task = Task.update(params[:restaurant])
+    if @task = Task.update(task_params)
       redirect_to task_path(@task)
     else
       render :new
