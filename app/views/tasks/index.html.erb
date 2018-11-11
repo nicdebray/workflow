@@ -1,0 +1,7 @@
+<h1>All Tasks</h1>
+
+<% @tasks.each do |task|  %>
+<div> <%= task.title %> </div>
+<div> <%= task.description %> </div>
+<div> <%= task.assign_to %> </div>
+<% end %>
