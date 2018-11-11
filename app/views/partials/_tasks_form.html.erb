@@ -1,9 +1,8 @@
-<%= form_for(@task) do |f| %>
-<%= f.label :title %>
-<%= f.text_field :title %>
-<%= f.label :description %>
-<%= f.text_field :description %>
-<%= f.label :assign_to %>
-<%= f.text_field :assign_to %>
-<%= f.submit %>
+<%= simple_form_for @task do |f| %>
+<%= f.input :title, label: "Task's title" %>
+<%= f.input :description, label: "Task's description" %>
+<%= f.input :assign_to, label: "Assigned to" %>
+<%= f.input :photo %>
+<%= f.input :photo_cache, as: :hidden %>
+<%= f.button :submit, class: "btn" %>
 <% end %>

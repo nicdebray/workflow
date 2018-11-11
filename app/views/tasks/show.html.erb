@@ -2,6 +2,7 @@
 <div> <%= @task.title %></div>
 <div> <%= @task.description %></div>
 <div> <%= @task.assign_to %></div>
+<div><%= cl_image_tag @task.photo, height: 300, width: 400, crop: :fill %></div>
 <div>
   <i><%= link_to "", task_path,
   method: :delete,
